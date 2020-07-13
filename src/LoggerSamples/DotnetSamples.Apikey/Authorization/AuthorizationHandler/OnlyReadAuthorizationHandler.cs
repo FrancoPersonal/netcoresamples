@@ -11,7 +11,7 @@ namespace LoggerAspNetCore.Authorization.AuthorizationHandler
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OnlyEmployeesRequirement requirement)
         {
-            if (context.User.IsInRole(Roles.Employee))
+            if (context.User.IsInRole(requirement.Rol))
             {
                 context.Succeed(requirement);
             }

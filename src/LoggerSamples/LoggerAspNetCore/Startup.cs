@@ -36,6 +36,16 @@ namespace LoggerAspNetCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers()
+    .AddNewtonsoftJson(options => {
+        options.SerializerSettings.ContractResolver = new DefaultContractResolver()
+        {
+            NamingStrategy = new SnakeCaseNamingStrategy()
+        };
+
+    }
+    )
+    ;
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = ApiKeyAuthenticationOptions.DefaultScheme;
@@ -43,28 +53,19 @@ namespace LoggerAspNetCore
             }).AddApiKeySupport(options => { });
             services.AddAuthorization(options =>
             {
-                options.AddPolicy(Policies.OnlyEmployees, policy => policy.Requirements.Add(new OnlyEmployeesRequirement()));
-                options.AddPolicy(Policies.OnlyManagers, policy => policy.Requirements.Add(new OnlyManagersRequirement()));
-                options.AddPolicy(Policies.OnlyThirdParties, policy => policy.Requirements.Add(new OnlyThirdPartiesRequirement()));
+                options.AddPolicy(Policies.OnlyEmployees, policy => policy.Requirements.Add(new OnlyReadRequirement()));
+                options.AddPolicy(Policies.OnlyManagers, policy => policy.Requirements.Add(new OnlyWriteRequirement()));
+                options.AddPolicy(Policies.OnlyThirdParties, policy => policy.Requirements.Add(new OnlyMonitorRequirement()));
             });
 
-            services.AddSingleton<IAuthorizationHandler, OnlyEmployeesAuthorizationHandler>();
-            services.AddSingleton<IAuthorizationHandler, OnlyManagersAuthorizationHandler>();
-            services.AddSingleton<IAuthorizationHandler, OnlyThirdPartiesAuthorizationHandler>();
+            services.AddSingleton<IAuthorizationHandler, OnlyReadAuthorizationHandler>();
+            services.AddSingleton<IAuthorizationHandler, OnlyWriteAuthorizationHandler>();
+            services.AddSingleton<IAuthorizationHandler, OnlyMonitorPartiesAuthorizationHandler>();
 
             services.AddSingleton<IGetApiKeyQuery, InMemoryGetApiKeyQuery>();
 
 
-            services.AddControllers()
-                .AddNewtonsoftJson(options => {
-                    options.SerializerSettings.ContractResolver = new DefaultContractResolver()
-                    {
-                        NamingStrategy = new SnakeCaseNamingStrategy()
-                    };
-                   
-                }
-                )
-                ;
+
 
  
             // Register the Swagger generator, defining one or more Swagger documents

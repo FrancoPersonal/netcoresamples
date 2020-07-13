@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerConsole", "LoggerConsole\LoggerConsole.csproj", "{798E4C85-2BA1-4BEF-B879-B5323ADC1A79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerConsole", "LoggerConsole\LoggerConsole.csproj", "{798E4C85-2BA1-4BEF-B879-B5323ADC1A79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerConsole.Serilog", "LoggerConsole.Serilog\LoggerConsole.Serilog.csproj", "{49215F09-30D5-4824-8878-2755862BC3AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerConsole.Serilog", "LoggerConsole.Serilog\LoggerConsole.Serilog.csproj", "{49215F09-30D5-4824-8878-2755862BC3AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerAspNetCore", "LoggerAspNetCore\LoggerAspNetCore.csproj", "{22BCF2F4-2113-4324-AD48-BFB05506CBAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerAspNetCore", "LoggerAspNetCore\LoggerAspNetCore.csproj", "{22BCF2F4-2113-4324-AD48-BFB05506CBAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetSamples.Apikey", "DotnetSamples.Apikey\DotnetSamples.Apikey.csproj", "{FE60ECD2-78AA-4F90-B0EB-F4399713BC37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{22BCF2F4-2113-4324-AD48-BFB05506CBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22BCF2F4-2113-4324-AD48-BFB05506CBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22BCF2F4-2113-4324-AD48-BFB05506CBAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE60ECD2-78AA-4F90-B0EB-F4399713BC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE60ECD2-78AA-4F90-B0EB-F4399713BC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE60ECD2-78AA-4F90-B0EB-F4399713BC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE60ECD2-78AA-4F90-B0EB-F4399713BC37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

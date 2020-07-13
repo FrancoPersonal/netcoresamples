@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace LoggerAspNetCore.Authorization.AuthorizationHandler
 {
-    public class OnlyThirdPartiesAuthorizationHandler : AuthorizationHandler<OnlyThirdPartiesRequirement>
+    public class OnlyMonitorPartiesAuthorizationHandler : AuthorizationHandler<OnlyMonitorRequirement>
     {
-        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OnlyThirdPartiesRequirement requirement)
+        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OnlyMonitorRequirement requirement)
         {
-            if (context.User.IsInRole(Roles.ThirdParty))
+            if (context.User.IsInRole(requirement.Rol))
             {
                 context.Succeed(requirement);
             }

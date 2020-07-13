@@ -7,5 +7,6 @@
     /// </summary>
     public class OnlyManagersRequirement : IAuthorizationRequirement
     {
+        public string Rol = Roles.Write;
     }
 }

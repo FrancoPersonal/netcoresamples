@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LoggerAspNetCore.Authorization
+namespace DotnetSamples.Apikey.Authorization
 {
     public static class Roles
     {

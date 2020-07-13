@@ -1,4 +1,4 @@
-﻿namespace LoggerAspNetCore.Authorization.Requirement
+﻿namespace DotnetSamples.Apikey.Authorization.Requirement
 {
     using Microsoft.AspNetCore.Authorization;
 
@@ -7,5 +7,6 @@
     /// </summary>
     public class OnlyThirdPartiesRequirement : IAuthorizationRequirement
     {
+        public string Rol = Roles.Monitor;
     }
 }

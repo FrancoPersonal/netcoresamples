@@ -7,5 +7,6 @@
     /// </summary>
     public class OnlyEmployeesRequirement : IAuthorizationRequirement
     {
+        public string Rol = Roles.Read;
     }
 }

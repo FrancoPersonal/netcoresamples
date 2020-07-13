@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using LoggerAspNetCore.Authorization;
 
 namespace LoggerAspNetCore.Controllers
 {
@@ -29,6 +30,7 @@ namespace LoggerAspNetCore.Controllers
 
         [HttpGet("only-authenticated")]
         [Authorize]
+        //[Authorize(Policy = Policies.OnlyManagers)]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
@@ -43,7 +45,8 @@ namespace LoggerAspNetCore.Controllers
         }
 
 
-        [HttpGet("anyone")]
+        [HttpGet("OnlyManagers")]
+        [Authorize(Policy = Policies.OnlyManagers)]
         public IEnumerable<WeatherForecast> Get(int id)
         {
             var rng = new Random();
