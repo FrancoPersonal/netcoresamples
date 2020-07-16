@@ -3,9 +3,9 @@
     using Microsoft.AspNetCore.Authorization;
 
     /// <summary>
-    /// Defines the <see cref="OnlyThirdPartiesRequirement" />.
+    /// Defines the <see cref="OnlyMonitorRequirement" />.
     /// </summary>
-    public class OnlyThirdPartiesRequirement : IAuthorizationRequirement
+    public class OnlyMonitorRequirement : IAuthorizationRequirement
     {
         public string Rol = Roles.Monitor;
     }

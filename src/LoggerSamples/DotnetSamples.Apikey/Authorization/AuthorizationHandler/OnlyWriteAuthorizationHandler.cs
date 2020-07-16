@@ -1,4 +1,4 @@
-﻿using LoggerAspNetCore.Authorization.Requirement;
+﻿using DotnetSamples.Apikey.Authorization.Requirement;
 using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LoggerAspNetCore.Authorization.AuthorizationHandler
 {
-    public class OnlyManagersAuthorizationHandler : AuthorizationHandler<OnlyWriteRequirement>
+    public class OnlyWriteAuthorizationHandler : AuthorizationHandler<OnlyWriteRequirement>
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OnlyWriteRequirement requirement)
         {

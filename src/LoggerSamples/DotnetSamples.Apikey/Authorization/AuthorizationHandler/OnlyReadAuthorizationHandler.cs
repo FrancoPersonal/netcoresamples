@@ -1,4 +1,4 @@
-﻿using LoggerAspNetCore.Authorization.Requirement;
+﻿using DotnetSamples.Apikey.Authorization.Requirement;
 using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace LoggerAspNetCore.Authorization.AuthorizationHandler
 {
-    public class OnlyEmployeesAuthorizationHandler : AuthorizationHandler<OnlyEmployeesRequirement>
+    public class OnlyReadAuthorizationHandler : AuthorizationHandler<OnlyReadRequirement>
     {
-        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OnlyEmployeesRequirement requirement)
+        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OnlyReadRequirement requirement)
         {
             if (context.User.IsInRole(requirement.Rol))
             {

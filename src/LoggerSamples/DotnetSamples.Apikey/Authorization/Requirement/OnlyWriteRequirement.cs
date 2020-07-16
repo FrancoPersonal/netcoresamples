@@ -1,11 +1,11 @@
-﻿namespace LoggerAspNetCore.Authorization.Requirement
+﻿namespace DotnetSamples.Apikey.Authorization.Requirement
 {
     using Microsoft.AspNetCore.Authorization;
 
     /// <summary>
-    /// Defines the <see cref="OnlyManagersRequirement" />.
+    /// Defines the <see cref="OnlyWriteRequirement" />.
     /// </summary>
-    public class OnlyManagersRequirement : IAuthorizationRequirement
+    public class OnlyWriteRequirement : IAuthorizationRequirement
     {
         public string Rol = Roles.Write;
     }

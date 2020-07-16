@@ -3,9 +3,9 @@
     using Microsoft.AspNetCore.Authorization;
 
     /// <summary>
-    /// Defines the <see cref="OnlyEmployeesRequirement" />.
+    /// Defines the <see cref="OnlyReadRequirement" />.
     /// </summary>
-    public class OnlyEmployeesRequirement : IAuthorizationRequirement
+    public class OnlyReadRequirement : IAuthorizationRequirement
     {
         public string Rol = Roles.Read;
     }
