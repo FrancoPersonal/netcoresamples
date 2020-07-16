@@ -13,11 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetSamples.Apikey", "Dot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLoggerSample", "CustomLoggerSample\CustomLoggerSample.csproj", "{BB84A3C6-7EDB-4373-BE52-54BD882C2D44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLoggerSample.ConsoleApp", "CustomLoggerSample.ConsoleApp\CustomLoggerSample.ConsoleApp.csproj", "{7F378EF1-99D2-42DA-A671-056DB7117644}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLoggerSample.ConsoleApp", "CustomLoggerSample.ConsoleApp\CustomLoggerSample.ConsoleApp.csproj", "{7F378EF1-99D2-42DA-A671-056DB7117644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLoggerSample.Test", "CustomLoggerSample.Test\CustomLoggerSample.Test.csproj", "{5525C3CD-5E14-4F86-9C29-EC36ACBDDF9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLoggerSample.Test", "CustomLoggerSample.Test\CustomLoggerSample.Test.csproj", "{5525C3CD-5E14-4F86-9C29-EC36ACBDDF9F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "customLogger1", "customLogger1", "{A078C3C7-C952-4FAF-A7D6-D9E21EB766A8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomLogger1", "CustomLogger1", "{A078C3C7-C952-4FAF-A7D6-D9E21EB766A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomLogger2", "CustomLogger2", "{E05B576C-A1C2-4068-8F32-CBE207E5D346}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLoggerSample2", "CustomLoggerSample2\CustomLoggerSample2.csproj", "{154C6B94-160B-4A6B-94C7-A2EC174A3488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLoggerSample2.ConsoleApp", "CustomLoggerSample2.ConsoleApp\CustomLoggerSample2.ConsoleApp.csproj", "{DA8F73C9-F4A0-4675-A16D-8342BA2A34D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +59,14 @@ Global
 		{5525C3CD-5E14-4F86-9C29-EC36ACBDDF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5525C3CD-5E14-4F86-9C29-EC36ACBDDF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5525C3CD-5E14-4F86-9C29-EC36ACBDDF9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{154C6B94-160B-4A6B-94C7-A2EC174A3488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154C6B94-160B-4A6B-94C7-A2EC174A3488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154C6B94-160B-4A6B-94C7-A2EC174A3488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154C6B94-160B-4A6B-94C7-A2EC174A3488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8F73C9-F4A0-4675-A16D-8342BA2A34D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8F73C9-F4A0-4675-A16D-8342BA2A34D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8F73C9-F4A0-4675-A16D-8342BA2A34D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8F73C9-F4A0-4675-A16D-8342BA2A34D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +75,8 @@ Global
 		{BB84A3C6-7EDB-4373-BE52-54BD882C2D44} = {A078C3C7-C952-4FAF-A7D6-D9E21EB766A8}
 		{7F378EF1-99D2-42DA-A671-056DB7117644} = {A078C3C7-C952-4FAF-A7D6-D9E21EB766A8}
 		{5525C3CD-5E14-4F86-9C29-EC36ACBDDF9F} = {A078C3C7-C952-4FAF-A7D6-D9E21EB766A8}
+		{154C6B94-160B-4A6B-94C7-A2EC174A3488} = {E05B576C-A1C2-4068-8F32-CBE207E5D346}
+		{DA8F73C9-F4A0-4675-A16D-8342BA2A34D5} = {E05B576C-A1C2-4068-8F32-CBE207E5D346}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {474906FF-BB09-425E-A656-2ED14FE1CBB5}

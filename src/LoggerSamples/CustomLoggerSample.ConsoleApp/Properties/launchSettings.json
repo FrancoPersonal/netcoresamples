@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CustomLoggerSample.ConsoleApp": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Hosting:Environment": "dev"
+      }
+    }
+  }
+}

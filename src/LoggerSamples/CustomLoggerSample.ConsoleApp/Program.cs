@@ -30,16 +30,16 @@ namespace CustomLoggerSample.ConsoleApp
         internal static ServiceProvider ConfigureServices(IServiceCollection services)
         {
             var serviceProvider = services
-                .AddSingleton<IConfigurationManager, ConfigurationManager>()
+                //.AddSingleton<IConfigurationManager, ConfigurationManager>()
                 .BuildServiceProvider();
 
-            var configManager = serviceProvider.GetRequiredService<IConfigurationManager>();
-            var config = configManager.BuildConfig();
-            services.Add(new ServiceDescriptor(typeof(IConfiguration), config));
+            //var configManager = serviceProvider.GetRequiredService<IConfigurationManager>();
+            //var config = configManager.BuildConfig();
+            //services.Add(new ServiceDescriptor(typeof(IConfiguration), config));
             services.AddLogging(configure =>
             {
                 configure.AddConsole();
-                  configure.AddProvider(new CustomLoggerProvider(config));
+                  configure.AddProvider(new CustomLoggerProvider(null));
             })
                 .AddTransient<SampleClass>()
                 .AddSingleton<SampleClass>();

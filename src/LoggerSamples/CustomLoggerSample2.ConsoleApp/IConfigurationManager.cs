@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace CustomLoggerSample.ConsoleApp
+namespace CustomLoggerSample2.ConsoleApp
 {
     public interface IConfigurationManager
     {
