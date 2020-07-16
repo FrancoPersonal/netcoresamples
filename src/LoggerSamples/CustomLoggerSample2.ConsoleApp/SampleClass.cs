@@ -18,11 +18,11 @@ namespace CustomLoggerSample2.ConsoleApp
 
         internal void SomeMethod()
         {
-            logger.LogInformation(message);
-            logger.LogWarning(message);
-            logger.LogCritical(message);
-            logger.LogError(message);
-            logger.LogDebug(message);
+            logger.LogInformation(message + "LogInformation");
+            logger.LogWarning(message + "LogWarning");
+            logger.LogCritical(message + "LogCritical");
+            logger.LogError(message + "LogError");
+            logger.LogDebug(message + "LogDebug");
         }
     }
 }

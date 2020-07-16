@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CustomLoggerSample2\CustomLoggerSample2.csproj" />
+    <ProjectReference Include="..\Tools.Configuration\Tools.Configuration.csproj" />
   </ItemGroup>
 
   <ItemGroup>
